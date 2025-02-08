@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice graphique</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-zinc-800 grid align-items content-center min-h-screen">
+  <main class="grid justify-center ">
+    <div  class="w-full max-w-xs bg-zinc-900 rounded-xl pt-8 drop-shadow-lg">
+      <!-- input -->
+      <div class="grid justify-center">
+        <input class="w-3xs bg-zinc-800 text-white text-xl text-right border border-zinc-950 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 focus:shadow" placeholder="0">
+    </div>
+    <div class="grid grid-flow-col grid-rows-5 gap-4 p-4 pt-8 pb-8">
+      <button class="bg-zinc-600 hover:bg-zinc-700 text-red-400 py-2 px-4 cursor-pointer rounded-full">C</button>
+      <button class="bg-zinc-700 hover:bg-zinc-800 text-white py-2 px-4 cursor-pointer rounded-full">7</button>
+      <button class="bg-zinc-700 hover:bg-zinc-800 text-white py-2 px-4 cursor-pointer rounded-full">4</button>
+      <button class="bg-zinc-700 hover:bg-zinc-800 text-white py-2 px-4 cursor-pointer rounded-full">1</button>
+      <button class="bg-zinc-700 hover:bg-zinc-800 text-white py-2 px-4 cursor-pointer rounded-full">+/=</button>
+      <button class="bg-zinc-600 hover:bg-zinc-700 text-lime-500 py-2 px-4 cursor-pointer rounded-full">( )</button>
+      <button class="bg-zinc-700 hover:bg-zinc-800 text-white py-2 px-4 cursor-pointer rounded-full">8</button>
+      <button class="bg-zinc-700 hover:bg-zinc-800 text-white py-2 px-4 cursor-pointer rounded-full">5</button>
+      <button class="bg-zinc-700 hover:bg-zinc-800 text-white py-2 px-4 cursor-pointer rounded-full">2</button>
+      <button class="bg-zinc-700 hover:bg-zinc-800 text-white py-2 px-4 cursor-pointer rounded-full">0</button>
+      <button class="bg-zinc-600 hover:bg-zinc-700 text-lime-500 py-2 px-4 cursor-pointer rounded-full">%</button>
+      <button class="bg-zinc-700 hover:bg-zinc-800 text-white py-2 px-4 cursor-pointer rounded-full">9</button>
+      <button class="bg-zinc-700 hover:bg-zinc-800 text-white py-2 px-4 cursor-pointer rounded-full">6</button>
+      <button class="bg-zinc-700 hover:bg-zinc-800 text-white py-2 px-4 cursor-pointer rounded-full">3</button>
+      <button class="bg-zinc-700 hover:bg-zinc-800 text-white py-2 px-4 cursor-pointer rounded-full">,</button>
+      <button class="bg-zinc-600 hover:bg-zinc-700 text-lime-500 py-2 px-4 cursor-pointer rounded-full">/</button>
+      <button class="bg-zinc-600 hover:bg-zinc-700 text-lime-500 py-2 px-4 cursor-pointer rounded-full">*</button>
+      <button class="bg-zinc-600 hover:bg-zinc-700 text-lime-500 py-2 px-4 cursor-pointer rounded-full">-</button>
+      <button class="bg-zinc-600 hover:bg-zinc-700 text-lime-500 py-2 px-4 cursor-pointer rounded-full">+</button>
+      <button class="bg-lime-500 hover:bg-lime-600 text-white py-2 px-4 cursor-pointer rounded-full">=</button>
+    </div>
+    </div>
+</main>
+</body>
+</html>
