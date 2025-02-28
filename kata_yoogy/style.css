@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: inherit;
+    color: inherit;
+    font: inherit;
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+ul, ol {
+    list-style: none;
+}
+body{
+    width: 390px;
+    align-items: center;
+    font-family: "Inter Tight", serif;
+}
+
+#logo{
+width: 87px;
+height: 29px;
+}
+#intro{
+    text-align: center;
+    padding: 130px 16px;
+}
+#intro > p{
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #445218;
+}
+h1{
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 4em;
+    color: #243010;
+}
+h2{
+    font-weight: 700;
+    font-size: 2.3rem;
+    color: #243010;
+    margin-bottom: 40px;
+}
+h4{
+    font-weight: 700;
+    font-size: 1.4em;
+    color: #243010;
+    margin-bottom: 24px;
+}
+#bgRecettes{
+    width: 390px;
+    height: 1630px;
+    border-radius: 32px 32px 0 0;
+    padding: 48px 16px;
+    background-color: #C0CC9B;
+}
+#titleLorem{
+    font-weight: 600;
+    color: #87A330;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+}
+#imgRecipe{
+    width: 358px;
+    height: 200px;
+    border-radius: 16px;
+}
+section{
+    width: 358px;
+    height: 442px;
+    margin-bottom: 32px;
+    border-radius: 16px;
+    background-color: #F4F5F0;
+}
+#textCard{
+    padding: 24px 24px 32px 24px;
+}
+#name{
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #87A330;
+    margin-bottom: 24px;
+}
+#description{
+    color: #445218;
+    margin-bottom: 24px;
+    font-weight: 0.87rem;   
+}
+#category{
+    display: flex;
+    font-size: 0.87rem;
+    font-weight: 600;
+    color: #445218;
+    width: 69px;
+    height: 25px;
+}
+#category > p{
+    background-color: #C0CC9B;
+    border-radius: 16px;
+    text-align: center;
+    padding: 2px 10px;
+    margin-right: 10px;
+
+}
+footer{
+    text-align: center;
+    background-color: #111406;
+    padding: 48px 64px;
+}
+#logo-yoogy-white{
+    margin-bottom: 16px;
+}
+li{
+    color: #C0CC9B;
+    margin-bottom: 16px;
+}
+#subfooter{
+    font-weight: 200;
+    color: #C0CC9B;  
+}
