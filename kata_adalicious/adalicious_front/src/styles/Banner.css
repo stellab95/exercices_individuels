@@ -1,0 +1,13 @@
+.logonav{
+    margin: 0;
+    font-size: 45px;
+    text-align: left;
+    font-family: "akaya kanadaka", system-ui;
+}
+.subtitle{
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}

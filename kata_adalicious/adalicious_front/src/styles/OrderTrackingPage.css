@@ -1,0 +1,26 @@
+.menu-content{
+    margin: 0;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: solid 1px gray;
+}
+.img-menu{
+    margin: 0;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    font-size: 90px;
+    align-items: center;
+    border-radius: 30px;
+    justify-content: center;
+    border: solid 1px green;
+}
+.order-traking{
+    color: green;
+    font-size: 20px;
+}
