@@ -1,20 +1,25 @@
+require('dotenv').config();
+console.log("DB_URL:", process.env.DB_URL);
+
+
 const express = require('express') // création d'une const pour importer express
 const cors = require('cors'); // création d'une const pour importer cors
 
 const app = express() // crée une instance de l’application Express. On assigne la fonction express() à la variable app qui permet de définir ensuite les routes, middlewares, lancer le serveur avec app.listen(). Il écoute les requêtes et y répond.
-const port = 3000 // création du port
 
 const { neon } = require('@neondatabase/serverless'); // { neon } permet d’extraire uniquement la fonction neon d’un objet qui en contient d’autres.
-const db_url = "postgresql://adaliciousdb_owner:npg_kFa1BZqC9gTV@ep-dry-grass-a5w73hdy-pooler.us-east-2.aws.neon.tech/adaliciousdb?sslmode=require" // URL trouvée dans Project Dashboard -> Connect to your database
+const port = process.env.PORT || 3000;
+const db_url = process.env.DB_URL;
 const sql = neon(db_url) // appelle la fonction neon avec db_url en paramètre, la constante stocke le résultat dans sql qui sera utilisée pour exécuter les requêtes sur la base de données
 
 app.use(express.json()); // ce middleware permet à Express de lire le JSON des requêtes entrantes
-// app.use(
-//  cors(
-//     {
-//     origin: 'http://localhost:5173',
-//     //methods: ["GET", "POST", "PUT", "DELETE"],
-//)); // ce middleware autorise les requêtes provenant d'un domaine différent
+app.use(
+ cors(
+    {
+    origin: 'http://localhost:5173',
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    }
+)); // ce middleware autorise les requêtes provenant d'un domaine différent
 //app.use(cors({ origin: 'http://localhost:5173' })); // ce middleware autorise les requêtes provenant uniquement du front
 
 // app.use(function(req, res, next) {
