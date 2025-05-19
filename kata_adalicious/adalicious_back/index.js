@@ -75,23 +75,40 @@ app.delete('/orders/:id', async (req, res) => {
   res.status(200).json(orders);
 })
 
-app.post('/users', async (req, res) => {
-  console.log("Requête reçue :", req.body);
-  const {name} = req.body;
+// app.post('/users', async (req, res) => {
+//   console.log("Requête reçue :", req.body);
+//   const {name} = req.body;
 
-  const users = await sql`INSERT INTO users (name)
-  VALUES (${name})
-  RETURNING name` 
-  res.status(200).json(users[0])
-})
+//   const users = await sql`INSERT INTO users (name)
+//   VALUES (${name})
+//   RETURNING name` 
+//   res.status(200).json(users[0])
+// })
 
 app.get('/users', async (req, res) => {
   const users = await sql`SELECT * FROM users`;
   res.status(200).json(users);
 });
 
+app.post('/users', async (req, res) => {
+  const name = req.body;
+  const users = await sql`INSERT INTO "users" VALUES ${name}
+  RETURNING name` 
+  res.json(users)
+})
+
+app.put('/users/:id', async (req, res) => {
+  const id = req.params.id
+  const users = await sql`SELECT * FROM users WHERE id=${id}`
+  res.json(users)
+})
 
 app.listen(port, () => { // écoute du serveur créé sur le port instancié
   console.log(`Example app listening on port ${port}`)
 })
+
+// app.get('/users', async (req, res) => {
+//   const users = await sql`SELECT * FROM users`
+//   res.json(users)
+// })
 
